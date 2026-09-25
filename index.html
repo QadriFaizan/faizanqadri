@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Faizan Qadri — Operations | Data | AI | Research</title>
+<meta name="description" content="Portfolio of Faizan Qadri, an Operations and Data Professional focused on multilingual AI datasets, scalable data pipelines, and distributed team management.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5F2EA;
+    --paper-alt:#EFEADD;
+    --ink:#221F1A;
+    --ink-soft:#5B564C;
+    --rule:#D8D0BE;
+    --accent:#2E4636;
+    --accent-soft:#5C7A66;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans',sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--accent);color:var(--paper);}
+  a{color:inherit;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 28px;}
+  header.top{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:26px 28px;max-width:760px;margin:0 auto;
+    font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--ink-soft);
+    border-bottom:1px solid var(--rule);
+  }
+  header.top nav a{margin-left:22px;text-decoration:none;color:var(--ink-soft);transition:color .15s;}
+  header.top nav a:hover{color:var(--ink);}
+
+  .hero{padding:76px 0 64px;}
+  .hero .kicker{
+    font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent-soft);
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-family:'Source Serif 4',serif;
+    font-weight:500;
+    font-size:clamp(2.5rem,6vw,3.6rem);
+    line-height:1.08;
+    margin:0 0 24px;
+    max-width:11ch;
+  }
+  .hero p.lede{
+    font-size:1.1rem;color:var(--ink-soft);max-width:46ch;margin:0 0 34px;
+  }
+  .hero .actions a{
+    display:inline-block;text-decoration:none;font-size:14px;
+    padding:11px 20px;border:1px solid var(--ink);border-radius:2px;margin-right:12px;
+    transition:background .15s,color .15s;
+  }
+  .hero .actions a.primary{background:var(--ink);color:var(--paper);}
+  .hero .actions a.primary:hover{background:var(--accent);border-color:var(--accent);}
+  .hero .actions a.ghost:hover{background:var(--ink);color:var(--paper);}
+
+  section{padding:56px 0;border-top:1px solid var(--rule);}
+  .section-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:36px;}
+  .section-head h2{
+    font-family:'Source Serif 4',serif;font-weight:500;font-size:1.6rem;margin:0;
+  }
+  .section-head .count{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-soft);}
+
+  .entry{padding:22px 0;border-top:1px solid var(--rule);}
+  .entry:first-child{border-top:none;}
+  .entry .meta{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent-soft);margin-bottom:8px;
+  }
+  .entry h3{font-family:'Source Serif 4',serif;font-weight:500;font-size:1.2rem;margin:0 0 8px;}
+  .entry p{color:var(--ink-soft);margin:0 0 14px;max-width:60ch;}
+  .stats{display:flex;gap:28px;flex-wrap:wrap;}
+  .stat b{display:block;font-family:'Source Serif 4',serif;font-size:1.3rem;font-weight:500;}
+  .stat span{display:block;font-size:12px;color:var(--ink-soft);}
+
+  .role{padding:20px 0;border-top:1px solid var(--rule);display:grid;grid-template-columns:130px 1fr;gap:18px;}
+  .role:first-of-type{border-top:none;}
+  .role .when{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-soft);padding-top:3px;}
+  .role h3{font-family:'Source Serif 4',serif;font-weight:500;font-size:1.05rem;margin:0 0 6px;}
+  .role p{color:var(--ink-soft);margin:0;max-width:56ch;}
+  @media (max-width:560px){
+    .role{grid-template-columns:1fr;gap:4px;}
+  }
+
+  .skills-grid{display:flex;flex-direction:column;gap:14px;}
+  .skill-row{display:grid;grid-template-columns:180px 1fr 34px;align-items:center;gap:14px;}
+  .skill-row .name{font-size:14px;}
+  .skill-bar{height:5px;background:var(--paper-alt);border-radius:3px;overflow:hidden;}
+  .skill-bar i{display:block;height:100%;background:var(--accent);}
+  .skill-row .pct{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-soft);text-align:right;}
+  @media (max-width:560px){
+    .skill-row{grid-template-columns:120px 1fr 30px;}
+  }
+
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+  @media (max-width:600px){.two-col{grid-template-columns:1fr;}}
+  .block h4{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent-soft);
+    text-transform:uppercase;letter-spacing:.04em;margin:0 0 14px;
+  }
+  .block .item{margin-bottom:14px;}
+  .block .item b{font-family:'Source Serif 4',serif;font-weight:500;font-size:1rem;display:block;}
+  .block .item span{font-size:13px;color:var(--ink-soft);}
+  .lang-list{display:flex;flex-wrap:wrap;gap:10px;}
+  .lang-list span{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;border:1px solid var(--rule);
+    padding:6px 10px;border-radius:2px;color:var(--ink-soft);
+  }
+
+  .contact h2{font-family:'Source Serif 4',serif;font-weight:500;font-size:2rem;max-width:14ch;margin:0 0 28px;}
+  .contact-links{display:flex;flex-direction:column;gap:10px;margin-bottom:28px;}
+  .contact-links a{font-size:1.05rem;text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;width:fit-content;}
+  .contact-links a:hover{border-color:var(--ink);}
+
+  .beyond .item{padding:20px 0;border-top:1px solid var(--rule);}
+  .beyond .item:first-child{border-top:none;}
+  .beyond h3{font-family:'Source Serif 4',serif;font-weight:500;font-size:1.05rem;margin:0 0 6px;}
+  .beyond p{color:var(--ink-soft);margin:0;max-width:58ch;}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;}
+  .tags span{font-size:12px;color:var(--ink-soft);font-family:'IBM Plex Mono',monospace;}
+  .tags span::after{content:"·";margin-left:8px;color:var(--rule);}
+  .tags span:last-child::after{content:"";}
+
+  footer{padding:36px 0 50px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-soft);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div>F.Q · 2024</div>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#field">Field</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <section class="hero" style="border-top:none;padding-bottom:0;">
+    <div class="kicker">Operations · Data · AI · Research — Anantnag, IN</div>
+    <h1>Faizan Qadri</h1>
+    <p class="lede">Building pipelines, people, and datasets that make AI work in the real world — especially where languages are underserved.</p>
+    <div class="actions">
+      <a class="primary" href="#work">View selected work</a>
+      <a class="ghost" href="#contact">Open a conversation</a>
+      <a class="ghost" href="faizan_qadri_resume.pdf" download>Download résumé</a>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="section-head">
+      <h2>Selected work</h2>
+      <div class="count">06 entries</div>
+    </div>
+
+    <div class="entry">
+      <div class="meta">2024 — Present · AI4Bharat, IIT Madras</div>
+      <h3>Multilingual AI Datasets for LLMs</h3>
+      <p>Leading two multilingual AI/NLP projects in Kashmiri and Urdu. Managing 30+ annotators, reviewers, and supercheckers across distributed teams.</p>
+      <div class="stats">
+        <div class="stat"><b>2</b><span>languages led</span></div>
+        <div class="stat"><b>30+</b><span>team members</span></div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="meta">2024 — 2025 · Invisible Technologies</div>
+      <h3>Multimodal Model Operations</h3>
+      <p>Led operations for a high-profile global AI project involving image and video generation models, designing structured rubrics and evaluation systems.</p>
+      <div class="stats">
+        <div class="stat"><b>Global</b><span>distributed teams</span></div>
+        <div class="stat"><b>Launch</b><span>phase support</span></div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="meta">2023 — 2024 · Kashmir Fieldwork</div>
+      <h3>Kashmiri Speech Data Collection</h3>
+      <p>Led large-scale speech data collection across 7 regions of Kashmir. Built a 25-member field team and delivered 1,050+ hours of diverse Kashmiri speech data.</p>
+      <div class="stats">
+        <div class="stat"><b>1,050+</b><span>hours of audio</span></div>
+        <div class="stat"><b>7</b><span>regions covered</span></div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="meta">2023 — 2024 · Urdu Audio</div>
+      <h3>Pan-India Urdu Audio Data</h3>
+      <p>Collaborated with Rekhta Foundation and DC Foundation for pan-India Urdu data collection, producing 1,500+ hours of refined, high-quality audio data.</p>
+      <div class="stats">
+        <div class="stat"><b>1,500+</b><span>hours refined</span></div>
+        <div class="stat"><b>Pan-India</b><span>partnerships</span></div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="meta">2020 · Computer Vision</div>
+      <h3>CNN-based Plant Disease Detection</h3>
+      <p>Developed a CNN model in Python to identify plant leaf diseases from ~10,000 images, achieving approximately 75% accuracy in detecting blight patterns.</p>
+      <div class="stats">
+        <div class="stat"><b>~10K</b><span>images</span></div>
+        <div class="stat"><b>75%</b><span>accuracy</span></div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="meta">2019 — 2020 · Edge Computing</div>
+      <h3>Raspberry Pi Cloud Server</h3>
+      <p>Built a low-cost, decentralized cloud server on Raspberry Pi, enabling secure file access and transfer across network environments with optimized resource allocation.</p>
+      <div class="stats">
+        <div class="stat"><b>Edge</b><span>computing</span></div>
+        <div class="stat"><b>Low-cost</b><span>infrastructure</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="field">
+    <div class="section-head">
+      <h2>Field record</h2>
+      <div class="count">2019 — Present</div>
+    </div>
+
+    <div class="role">
+      <div class="when">Jan 2024 — Present</div>
+      <div><h3>Data Lead · AI4Bharat (IIT Madras)</h3>
+      <p>Leading 2 multilingual AI/NLP projects (Kashmiri, Urdu). Coordinating 30+ annotators, reviewers, and supercheckers. Designing end-to-end data pipelines, QA systems, and validation loops with ~70% structured output accuracy.</p></div>
+    </div>
+    <div class="role">
+      <div class="when">May 2024 — Apr 2025</div>
+      <div><h3>Lead Operator · Invisible Technologies</h3>
+      <p>Led operations for a high-profile global AI project involving multimodal model development. Coordinated globally distributed teams, designed annotation rubrics, and supported early deployment and launch.</p></div>
+    </div>
+    <div class="role">
+      <div class="when">May 2023 — Dec 2023</div>
+      <div><h3>Lead Coordinator · AI4Bharat (IIT Madras)</h3>
+      <p>Led large-scale Kashmiri speech data collection across 7 regions. Built and managed a 25-member field team and delivered 1,050+ hours of high-quality, demographically diverse speech data.</p></div>
+    </div>
+    <div class="role">
+      <div class="when">Jul 2021 — Apr 2023</div>
+      <div><h3>Regional Marketing Manager · Westshapeonline</h3>
+      <p>Led digital transformation of a regional brand during COVID. Built a complete product catalog through photography and videography, and executed multi-channel campaigns across social media, TV, and print.</p></div>
+    </div>
+    <div class="role">
+      <div class="when">Jan 2023 — Jun 2023</div>
+      <div><h3>Marketing Specialist · Sampark Softwares Pvt. Ltd.</h3>
+      <p>Built and launched a digital marketplace for software solutions. Developed website, content strategy, and product positioning, converting B2B leads into sales.</p></div>
+    </div>
+    <div class="role">
+      <div class="when">Aug 2022 — Mar 2023</div>
+      <div><h3>People Operations Manager · MashiQ</h3>
+      <p>Managed a large student user base for an education-focused competitive platform. Led social media, engagement, and user communication to scale adoption across school networks.</p></div>
+    </div>
+    <div class="role">
+      <div class="when">Jun 2019 — Jul 2019</div>
+      <div><h3>Intern / Junior Developer · Corp H</h3>
+      <p>Assisted in technical and operational tasks related to software and data handling.</p></div>
+    </div>
+
+    <div style="margin-top:44px;">
+      <div class="block">
+        <h4>Skills</h4>
+        <div class="skills-grid">
+          <div class="skill-row"><span class="name">AI / NLP Data Operations</span><div class="skill-bar"><i style="width:95%"></i></div><span class="pct">95</span></div>
+          <div class="skill-row"><span class="name">Distributed Team Management</span><div class="skill-bar"><i style="width:92%"></i></div><span class="pct">92</span></div>
+          <div class="skill-row"><span class="name">Data Pipelines &amp; QA Systems</span><div class="skill-bar"><i style="width:88%"></i></div><span class="pct">88</span></div>
+          <div class="skill-row"><span class="name">Multilingual Data Collection</span><div class="skill-bar"><i style="width:85%"></i></div><span class="pct">85</span></div>
+          <div class="skill-row"><span class="name">Python &amp; SQL</span><div class="skill-bar"><i style="width:80%"></i></div><span class="pct">80</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-top:48px;">
+      <div class="block">
+        <h4>Education</h4>
+        <div class="item">
+          <b>MBA — International Business</b>
+          <span>Jamia Millia Islamia · 2021 — 2022 · CGPA 8.82</span>
+        </div>
+        <div class="item">
+          <b>BTech — Computer Science Engineering</b>
+          <span>Sharda University · 2016 — 2020 · CGPA 8.12</span>
+        </div>
+      </div>
+      <div class="block">
+        <h4>Languages</h4>
+        <div class="lang-list">
+          <span>English (C2)</span>
+          <span>Kashmiri (C2)</span>
+          <span>Urdu (C2)</span>
+          <span>Hindi (C2)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="beyond">
+    <div class="section-head">
+      <h2>Beyond work</h2>
+      <div class="count">Outreach &amp; interests</div>
+    </div>
+    <div class="item">
+      <h3>Boffins Foundation</h3>
+      <p>Delivering technical education sessions in schools and conducting competitive exam awareness programs for underprivileged students.</p>
+    </div>
+    <div class="item">
+      <h3>Photography &amp; Culture</h3>
+      <p>Pro bono wedding photography for Kashmiri families and documenting Kashmiri culture, landscapes, and crafts since 2012.</p>
+    </div>
+    <div class="item">
+      <h3>Social &amp; Environment</h3>
+      <p>Community-driven cleanliness drives and afforestation initiatives across Himalayan forest regions.</p>
+    </div>
+    <div class="tags">
+      <span>Cultural documentation</span><span>Ethnic interior design</span><span>Woodwork</span>
+      <span>Fitness</span><span>AI &amp; Technology</span><span>Animation</span><span>Videography</span>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Let's keep the record honest.</h2>
+    <p style="color:var(--ink-soft);max-width:48ch;margin-top:-14px;margin-bottom:28px;">Open to data-ops, AI research coordination, and operations roles where language, scale, and people matter.</p>
+    <div class="contact-links">
+      <a href="mailto:fznqadri@gmail.com">fznqadri@gmail.com</a>
+      <a href="tel:+919999415646">+91 9999415646</a>
+      <a href="https://linkedin.com/in/faizaanqadri" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="faizan_qadri_resume.pdf" download>Download résumé (PDF)</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>Faizan Qadri — Field Notebook, 2024</span>
+    <span>Anantnag, Jammu &amp; Kashmir, India</span>
+  </footer>
+
+</div>
+</body>
+</html>
